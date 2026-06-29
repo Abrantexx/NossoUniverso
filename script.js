@@ -46,7 +46,7 @@ const fotos = [
     },
     {
         Imagem: "Imagens/foto4.jpeg",
-        legenda: "Seu sorriso consegue fazer parecer que o mundo ficou melhor."
+        legenda: "Seu sorriso consegue fazer parecer que o mundo ficou um pouquinho melhor."
     },
     {
         Imagem: "Imagens/foto5.jpeg",
