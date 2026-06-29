@@ -33,23 +33,23 @@ Espero que você goste.
 
 const fotos = [
     {
-        Imagem: "imagens/foto1.jpeg",
+        Imagem: "Imagens/foto1.jpeg",
         legenda: "Seu sorriso consegue fazer parecer que o mundo ficou um pouquinho melhor."
     },
     {
-        Imagem: "imagens/foto2.jpeg",
+        Imagem: "Imagens/foto2.jpeg",
         legenda: "Você provavelmente nem imagina o quanto eu gosto dessa foto."
     },
     {
-        Imagem: "imagens/foto3.jpeg",
+        Imagem: "Imagens/foto3.jpeg",
         legenda: "Tem dias em que tudo parece pesado... até eu olhar uma foto sua."
     },
     {
-        Imagem: "imagens/foto4.jpeg",
+        Imagem: "Imagens/foto4.jpeg",
         legenda: "Acho que foi nessa foto que eu fiquei olhando para a tela por tempo demais."
     },
     {
-        Imagem: "imagens/foto5.jpeg",
+        Imagem: "Imagens/foto5.jpeg",
         legenda: "E mesmo depois de todas essas... eu ainda sei que minha foto favorita será a próxima que eu tirar de você."
     }
 ];
