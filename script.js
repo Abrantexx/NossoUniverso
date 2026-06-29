@@ -34,7 +34,7 @@ Espero que você goste.
 const fotos = [
     {
         Imagem: "Imagens/foto1.jpeg",
-        legenda: "Seu sorriso consegue fazer parecer que o mundo ficou um pouquinho melhor."
+        legenda: "Acho que foi nessa foto que eu fiquei olhando para a tela por tempo demais."
     },
     {
         Imagem: "Imagens/foto2.jpeg",
@@ -46,7 +46,7 @@ const fotos = [
     },
     {
         Imagem: "Imagens/foto4.jpeg",
-        legenda: "Acho que foi nessa foto que eu fiquei olhando para a tela por tempo demais."
+        legenda: "Seu sorriso consegue fazer parecer que o mundo ficou melhor."
     },
     {
         Imagem: "Imagens/foto5.jpeg",
