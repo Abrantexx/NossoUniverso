@@ -1,261 +1,262 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-body{
-
-    font-family:'Poppins',sans-serif;
-
-    height:100vh;
-
-    overflow:hidden;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:linear-gradient(-45deg,#1a0b2e,#302b63,#5b247a,#8e44ad);
-    background-size:400% 400%;
-    animation:fundo 12s ease infinite;
-
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #1a0b2e, #302b63, #5b247a, #8e44ad);
+    background-size: 400% 400%;
+    animation: fundo 12s ease infinite;
 }
-
-@keyframes fundo{
-
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-
+@keyframes fundo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
-
-.card{
-
-    width:90%;
-    max-width:380px;
-
-    padding:35px;
-
-    border-radius:25px;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-
-    text-align:center;
-
-    color:white;
-
-    z-index:2;
-
+.card {
+    width: 90%;
+    max-width: 380px;
+    padding: 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+    text-align: center;
+    color: white;
+    z-index: 2;
 }
-
-h1{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:42px;
-
-    margin-bottom:20px;
-
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
-
-p{
-
-    margin:15px 0;
-
-    font-size:17px;
-
-    line-height:28px;
-
-    color:#ececec;
-
+p {
+    margin: 15px 0;
+    font-size: 17px;
+    line-height: 28px;
+    color: #ececec;
 }
-
-button{
-
-    margin-top:25px;
-
-    width:100%;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:linear-gradient(45deg,#ff5fa2,#ff85c1);
-
-    color:white;
-
-    font-size:17px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff5fa2, #ff85c1);
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: transform .3s;
 }
-
-button:active{
-
-    transform:scale(.97);
-
+button:active {
+    transform: scale(.97);
 }
-
-#hearts{
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    overflow:hidden;
-
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
 }
-
-.heart{
-
-    position:absolute;
-
-    animation:cair linear forwards;
-
+.heart {
+    position: absolute;
+    animation: cair linear forwards;
 }
-
-@keyframes cair{
-
-0%{
-
-transform:translateY(-10vh);
-
-opacity:0;
-
+@keyframes cair {
+    0% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
 }
-
-20%{
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(110vh);
-
-opacity:0;
-
-}
-
+/* =======================
+   UTILITÁRIOS
+======================= */
+.hidden {
+    display: none !important;
 }
 /* =======================
    CARTA
 ======================= */
-
-.hidden{
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+#letter,
+#gallery,
+#final {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 5;
+}
+.paper {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+    animation: subir .8s ease;
+}
+.paper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+#typedText {
+    color: #333;
+    line-height: 32px;
+    white-space: pre-line;
+    min-height: 220px;
+    font-size: 18px;
+}
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =======================
+   GALERIA
+======================= */
+.gallery {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+    text-align: center;
+    animation: subir .8s ease;
+}
+.gallery img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.gallery p {
+    color: #333;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 10px;
 }
 
-#letter{
+/* =======================
+   TELA FINAL
+======================= */
 
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:20px;
-
-    z-index:5;
-
+.final-card {
+    width: 90%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .4);
+    text-align: center;
+    color: white;
+    animation: subir .9s ease;
 }
 
-.paper{
-
-    width:100%;
-
-    max-width:420px;
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
-
-    animation:subir .8s ease;
-
+.final-heart {
+    font-size: 56px;
+    margin-bottom: 15px;
+    animation: pulsar 1.4s ease-in-out infinite;
 }
 
-.paper h2{
-
-    text-align:center;
-
-    margin-bottom:20px;
-
-    font-size:32px;
-
+.final-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    margin-bottom: 20px;
 }
 
-#typedText{
-
-    color:#333;
-
-    line-height:32px;
-
-    white-space:pre-line;
-
-    min-height:220px;
-
-    font-size:18px;
-
+.final-message {
+    font-size: 17px;
+    line-height: 30px;
+    color: #f5f5f5;
+    margin: 0 0 25px;
 }
 
-@keyframes subir{
-
-from{
-
-opacity:0;
-
-transform:translateY(40px);
-
+.final-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: #ffe4f0;
+    margin: 0;
 }
 
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
 }
-
-}#letter{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:20px;
-
-    z-index:5;
-
-    transition:.6s;
-
+/* =======================
+   TELA FINAL
+======================= */
+.final-card {
+    width: 90%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .4);
+    text-align: center;
+    color: white;
+    animation: subir .9s ease;
+}
+.final-heart {
+    font-size: 56px;
+    margin-bottom: 15px;
+    animation: pulsar 1.4s ease-in-out infinite;
+}
+.final-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+.final-message {
+    font-size: 17px;
+    line-height: 30px;
+    color: #f5f5f5;
+    margin: 0 0 25px;
+}
+.contador {
+    font-size: 15px;
+    color: #ffd6ec;
+    margin-bottom: 20px;
+    padding: 12px 18px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .08);
+    display: inline-block;
+}
+.final-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: #ffe4f0;
+    margin: 0;
+}
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
 }
