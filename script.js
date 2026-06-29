@@ -58,7 +58,7 @@ let fotoAtual = 0;
 let intervaloCoracoes = null;
 
 function mostrarFoto() {
-    galleryImage.src = fotos[fotoAtual].imagem;
+    galleryImage.src = fotos[fotoAtual].Imagem;
     galleryCaption.textContent = fotos[fotoAtual].legenda;
 
     if (fotoAtual === fotos.length - 1) {
